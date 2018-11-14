@@ -1,0 +1,12 @@
+.App{
+  margin: 20px auto;
+  color: pink;
+  font-family: Helvetica, Arial, sans-serif;
+}
+h1{
+  text-shadow: 1px 1px 2px rgb(20, 20, 20);
+}
+h2{
+  font-size: 1.2em;
+  color: aquamarine;
+}
