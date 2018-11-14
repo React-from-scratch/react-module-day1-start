@@ -1,7 +1,22 @@
 import React, { Component } from "react";
 import "./App.css";
+import User from "./components/User"
 
 class App extends Component {
+  // Can use State only in components that are "class extended" by "Component class"
+  state = {
+    userA: {
+      firstName: 'Bianca',
+      lastName: 'Banana',
+      avatarUrl: 'https://vignette.wikia.nocookie.net/simpsonsff/images/e/ec/Lisa_Simpson.png/revision/latest?cb=20100226155634&path-prefix=es'
+    },
+    userB: {
+      firstName: 'Pepe',
+      lastName: 'Wonder',
+      avatarUrl: 'https://i.pinimg.com/originals/bc/16/f9/bc16f9cb28b81f0d0a9e60bace7601cd.png'
+    }
+  }
+
   render(){
     const formatName = user => `${user.firstName} ${user.lastName}`;
     
@@ -29,8 +44,13 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hello World!</h1>
+
+        <User firstName={this.state.userA.firstName}/>
+        {displayAvatar(this.state.userA)}
+        <User firstName={this.state.userB.firstName}/>
+        {displayAvatar(this.state.userB)}
+        {/* First iteration */}
         {element}
-        {displayAvatar(user)}
       </div>
     )
   }
